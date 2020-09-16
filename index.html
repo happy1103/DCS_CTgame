@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="css.css" />
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.6.0/sha1.min.js" integrity="sha512-q6FuE4ifzTygTD/ug8CFnAFXl+i1zXqBWP6flRAuSWjaXrFu4Cznk8Xr+VrWMyi7fSatbssh7ufobAetvXK8Pg==" crossorigin="anonymous"></script>
 	</head>
 	<body >
 	<br><br><div style="text-align:center;"><h1 style="position: relative; z-index:100; color : white;">CT實驗玩起來</h1></div>
@@ -130,11 +131,12 @@
 	<script type="text/javascript">
 	
 	var Hi = document.getElementById("hi"); 
-
+	var dcs = "e3b5b9869296f4fc81d83df75062331adaab7bf5";
+	
 	function disp_prompt()
 	 {
-	  var name=prompt("密碼","")
-	  if (name == "dcslabCT")
+	  var name = prompt("密碼","")
+	  if (dcs === sha1(name))
 		{
 			Hi.setAttribute("href", "download.html");
 			console.log("go");
